@@ -1,4 +1,3 @@
---
 language: python
 python: 3.8
 env:
@@ -8,12 +7,7 @@ if: (type = push AND branch = master)
 stages:
   - Build
   - Lint
-  - Unit Tests
-  - name: CodeQL
-    if: branch = master
-  - name: Release
-    if: tag ~= ^v*
-_shared_install: null
+  - Unit Test
 install:
   - python -m pip install --upgrade pip
   - 'pip install -e .[dev]'
