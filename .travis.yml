@@ -1,5 +1,6 @@
 language: python
 python: 3.8
+arch: arm64
 env:
   global:
     - PYTHON_VERSION: 3.8
@@ -18,6 +19,7 @@ script:
 _ubuntu_latest: null
 os: linux
 dist: focal
+arch: arm64
 jobs:
   include:
     - stage: Build
